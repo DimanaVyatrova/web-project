@@ -19,10 +19,10 @@ main {
     margin: auto;
 }
 
-
 table{
     width: 100%;
     background-color: rgb(255, 251, 233);
+    margin-bottom: 15px;
 }
 
 th {
@@ -48,7 +48,7 @@ th {
     font-size: 17px;
 }
 
-p {
+#heading_id {
     margin: 0;
     padding-left: 0px;
     background-color: rgb(215, 115, 34);
@@ -72,4 +72,20 @@ img {
     height: 26px;
     width: 26px;
     background-color: rgb(215, 115, 34);
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+text {
+    padding: 15px;
+    margin-bottom: 15px;
 }
