@@ -19,7 +19,7 @@ main {
     margin: auto;
 }
 
-table{
+/* table{
     width: 100%;
     background-color: rgb(255, 251, 233);
     margin-bottom: 15px;
@@ -36,7 +36,7 @@ th {
 .nontaken:hover {
     background-color: rgb(255, 196, 0);
     cursor: pointer;
-}
+} */
 
 /* Style the links inside the navigation bar */
 .topnav a, p, img {
@@ -80,7 +80,7 @@ img {
     flex-direction: column;
     align-items: flex-start;
 }
-
+/* 
 input {
     margin-bottom: 10px;
 }
@@ -88,4 +88,78 @@ input {
 text {
     padding: 15px;
     margin-bottom: 15px;
+} */
+
+.form-container {
+    width: 25%;
+    /*text-align: center;*/
+    padding-top: 20px;
+    border-top: 0px;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 10px;
+    border-style: solid;
+    border-color: rgb(255, 196, 0);
+    box-shadow: 12px 12px 30px 1px rgba(160, 159, 159, 0.2);
+    margin: auto;
+    margin-top: 50px;
+    background-color: rgb(255, 251, 233);
+}
+
+.form-header h2 {
+    padding-top: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.form-body {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.form-item {
+    margin-top: 10px;
+}
+
+.form-item input, label {
+    display: block;
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.form-item label{
+    font-size: 14px;
+}
+
+.form-item input, select{
+    border-radius: 5px;
+    border: 1px rgb(153, 151, 151) solid;
+    height: 30px;
+}
+
+.form-item .btn {
+    background-color: rgb(215, 115, 34);
+    color: white;
+    font-size: medium;
+    border-style: none;
+    border-radius: 35px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.form-item .btn:hover {
+    background-color: rgb(106, 51, 6);
+    color: white;
+
+    cursor: pointer;
+}
+
+select {
+    width: 100%;
 }

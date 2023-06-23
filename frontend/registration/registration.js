@@ -17,7 +17,7 @@ registrationForm.addEventListener('submit', (event) => {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: ""
+        body: JSON.stringify(userData)
     })
     .then((httpData) => {
 

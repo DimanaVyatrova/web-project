@@ -20,10 +20,44 @@
         <h1>Записване на час за презентация</h1>
     </header>
 
-    <main>
-        <h3>Дата: 12.05.2023</h3>
+    <main class="form-container">
+        <section class="form-body">
+            <form id="signup-form">
+                <section class="form-item">
+                    <label for="name">Име</label>
+                    <input id="name" name="name">
+                </section>
+                <section class="form-item">
+                    <label for="faculty-number">Факултетен номер</label>
+                    <input id="faculty-number" name="faculty-number">
+                </section>
+                <section class="form-item">
+                    <label for="topic">Тема</label>
+                    <input id="topic" name="topic">
+                </section>
+                <section class="form-item">
+                    <label for="date">Дата</label>
+                    <select id="date">
+                        <option value="12.05.23">12.05.23</option>
+                        <option value="12.05.23">13.05.23</option>
+                    </select>
+                </section>
+                <section class="form-item">
+                    <label for="hour">Час</label>
+                    <select id="hour">
+                        <option value="12:00-12:07">12:00-12:07</option>
+                        <option value="12:08-12:15">12:08-12:15</option>
+                        <option value="12:16-12:23">12:16-12:23</option>
+                    </select>
+                </section>
+                
+                <section class="form-item">
+                    <button class="btn">Записване</button>
+                </section>
+            </form>
+        </section>
 
-        <table>
+        <!-- <table>
             <tr>
               <th>Час</th>
               <th>Име</th>
@@ -85,7 +119,7 @@
 
           <section id="info">
 
-          </section>
+          </section> -->
     </main>
 </body>
 </html>

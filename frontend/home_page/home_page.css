@@ -26,6 +26,11 @@ li {
     float: left;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(114, 112, 112);
+}
+
 button {
     height: 150px;
     width: 150px;

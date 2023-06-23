@@ -21,7 +21,8 @@
         return ["isValid" => true, "message" => "Данните са валидни!"];
     }
 
-    $userData = ["email" => "didi@di.di", "username" => "didi", "password" => "123", "repeat-password" => "1234"];
+    $userData = json_decode(file_get_contents("php://input"), true);
+    //var_dump($userData);
 
     if ($userData) {
 

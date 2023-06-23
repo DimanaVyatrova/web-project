@@ -1,41 +1,56 @@
-for(let i = 1; i<=13; i++) {
+const signupForm = document.getElementById('signup-form');
 
-}
+signupForm.addEventListener('submit', (event) => {
+    console.log("ahahaha");
+    const inputs = signupForm.querySelectorAll('input');
 
-const elem = document.getElementById("1");
-console.log(elem);
+    const userData = {};
+    inputs.forEach(input => {
+         userData[input.name] = input.value;
+    });
 
-elem.addEventListener('click', (event) => {
-    console.log("here");
+    const selectors = signupForm.querySelectorAll('select');
+    selectors.forEach(selector => {
+        userData[selector.id] = selector.value;
+   });
 
-    const section = document.getElementById("info");
-    // const form = document.createElement("form");
-    // section.appendChild(form);
 
-    // const form_section = document.createElement("section");
-    // form.appendChild(form_section);
+//    var subjectObject = {
+//     "12.05.23": [
+//       "12:00-12:07", "12:08-12:15", "12:16-12:23"   
+//     ],
+//     "13.05.23": [
+//         "12:00-12:07", "12:08-12:15", "12:16-12:23" 
+//     ]
+//   }
 
-    const p = document.createElement("text");
-    p.textContent = "Записване на час за: дата 12.05.23, час " + elem.innerText;
-    section.appendChild(p);
+   var selectObject = document.getElementById("hour");
+    for (var i=0; i<selectObject.length; i++) {
+        if (selectObject.options[i].value == userData["hour"]) {
+            selectObject.remove(i);
+        }
+    }
+    // console.log(userData['password']);
+    console.log(userData);
+    console.log(JSON.stringify(userData));
 
-    section.appendChild(document.createElement("br"));
+    fetch('../../backend/api/date_signup.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData)
+    })
+    .then((httpData) => {
+        console.log(httpData);
 
-    const name = document.createElement("input");
-    name.setAttribute("placeholder", "Име");
-    section.appendChild(name);
+        return httpData.json();
+    })
+    .then((data) => {
+        console.log("here");
+        console.log(data);
 
-    section.appendChild(document.createElement("br"));
-
-    const fn = document.createElement("input");
-    name.setAttribute("placeholder", "Факултетен номер");
-    section.appendChild(fn);
-
-    section.appendChild(document.createElement("br"));
-
-    const topic = document.createElement("input");
-    name.setAttribute("placeholder", "Тема на реферата");
-    section.appendChild(topic);
+    });
 
     event.preventDefault();
 });
