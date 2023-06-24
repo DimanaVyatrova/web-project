@@ -50,6 +50,23 @@ signupForm.addEventListener('submit', (event) => {
         console.log("here");
         console.log(data);
 
+        const pass_rep = document.getElementById('last');
+        const p = document.createElement('p');
+        p.setAttribute("id", "msg");
+        pass_rep.appendChild(p);
+
+        if (data.status === 'SUCCESS') {
+            const p = document.getElementById("msg");
+            p.textContent = data.message;
+            p.style.color = "green";
+        }
+
+        if (data.status === 'ERROR') {
+            const p = document.getElementById("msg");
+            p.textContent = "Грешка в сървъра. Моля, опитайте по-късно.";
+            p.style.color = "red";
+        }
+
     });
 
     event.preventDefault();

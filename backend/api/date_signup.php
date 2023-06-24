@@ -16,13 +16,13 @@
         // $userDataSQL = ["name" => $userData["name"], "faculty-number" => $userData["faculty-number"], "topic" => $userData["topic"],
         // "date" => $userData["date"], "hour" => $userData["hour"]];
 
-         $sql = "INSERT INTO presentations (name, faculty_number, topic, date, hour) 
-                 VALUES (:name, :faculty_number, :topic, :date, :hour)";
+         $sql = "INSERT INTO presentations (name, faculty_number, topic, date, hour, field, technology) 
+                 VALUES (:name, :faculty_number, :topic, :date, :hour, :field, :technology)";
 
         $stmt = $connection->prepare($sql);
         $stmt->execute($userData);
 
-        echo json_encode(["status" => "SUCCESS", "message" => "Успешно записахте час"]);
+        echo json_encode(["status" => "SUCCESS", "message" => "Успешно записахте час за представяне на презентация."]);
 
     } catch (PDOException $e) {
         http_response_code(500);

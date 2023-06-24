@@ -5,27 +5,28 @@ fetch('../../backend/api/schedule.php')
         return response.json();
     })
     .then(rows => {
+        console.log(rows);
         rows.forEach(row => {
+            console.log(row);
             const tableRow = document.createElement('tr');
 
             const tableRowHour = document.createElement('td');
             tableRowHour.innerText = row.hour;
             tableRow.appendChild(tableRowHour);
-            console.log(row.hour);
 
-            // const tableRowName = document.createElement('td');
-            // tableRowHour.innerText = row.name;
-            // tableRow.appendChild(tableRowName);
+            const tableRowName = document.createElement('td');
+            tableRowName.innerText = row.name;
+            tableRow.appendChild(tableRowName);
 
-            // const tableRowFN = document.createElement('td');
-            // tableRowHour.innerText = row.faculty_number;
-            // tableRow.appendChild(tableRowFN);
+            const tableRowFN = document.createElement('td');
+            tableRowFN.innerText = row.faculty_number;
+            tableRow.appendChild(tableRowFN);
 
-            // const tableRowTopic = document.createElement('td');
-            // tableRowHour.innerText = row.topic;
-            // tableRow.appendChild(tableRowTopic);
+            const tableRowTopic = document.createElement('td');
+            tableRowTopic.innerText = row.topic;
+            tableRow.appendChild(tableRowTopic);
 
-            // table.appendChild(tableRow);
+            table.appendChild(tableRow);
 
         });
 

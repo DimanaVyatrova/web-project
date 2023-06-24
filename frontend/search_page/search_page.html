@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./search_page.css">
+    <script src="./search_page.css" defer></script>
+</head>
+<body>
+    <section class="topnav">
+        <img src="https://cdn-icons-png.flaticon.com/512/262/262236.png" alt="">
+        <p id="heading_id">Presentator</p>
+        <a href="../home_page/home_page.html">Начало</a>
+        <a href="#contact">График</a>
+        <a href="#about">Търсене на презентации</a>
+    </section>
+
+    <header>
+        <h1>Търсене на презентации</h1>
+    </header>
+
+    <main class="form-container">
+        <section class="form-body">
+            <form id="search-form">
+                <section class="form-item">
+                    <label for="date">Дата</label>
+                    <select id="date">
+                        <option value=" "></option>
+                        <option value="12.05.23">12.05.23</option>
+                        <option value="12.05.23">13.05.23</option>
+                    </select>
+                </section>
+                <section class="form-item">
+                    <label for="field">Област</label>
+                    <select id="field">
+                        <option value="none"></option>
+                        <option value="Front-End">Front-End</option>
+                        <option value="Back-End">Back-End</option>
+                    </select>
+                </section>
+
+                <section class="form-item" id="last">
+                    <label for="technology">Технология</label>
+                    <select id="technology">
+                        <option value="none"></option>
+                        <option value="Css">Css</option>
+                        <option value="HTML">HTML</option>
+                        <option value="HTML">PHP</option>
+                        <option value="HTML">JavaScript</option>
+                        <option value="HTML">TypeScript</option>
+                        <option value="HTML">HTTP</option>
+                    </select>
+                </section>
+                
+                <section class="form-item">
+                    <button class="btn">Търсене</button>
+                </section>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

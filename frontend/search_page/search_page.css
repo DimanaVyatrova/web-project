@@ -10,13 +10,44 @@ body {
 
 header {
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 50px;
 }
 
 main {
     width: 50%;
     margin: auto;
+}
+
+.form-body {
+    display: table;
+    margin: auto;
+}
+
+.form-item {
+    display: table-cell;
+    padding-right: 20px;
+} 
+
+.form-item select{
+    border-radius: 5px;
+    border: 1px rgb(153, 151, 151) solid;
+    height: 30px;
+}
+
+button {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px rgb(153, 151, 151) solid;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(227, 243, 154);
+}
+
+button:hover {
+    background-color: rgb(67, 106, 12);
+    color: white;
+    cursor: pointer;
 }
 
 .topnav a, p, img {
@@ -45,21 +76,4 @@ img {
     height: 26px;
     width: 26px;
     background-color: rgb(215, 115, 34);
-}
-
-table{
-    width: 100%;
-    background-color: rgb(255, 251, 233);
-    margin-bottom: 15px;
-}
-
-th {
-    background-color: rgb(255, 196, 0);
-}
-
-td {
-    border-style: solid;
-    border-color: rgb(174, 174, 174);
-    border-width: 0.5px;
-}
-
+}  
