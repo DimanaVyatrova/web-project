@@ -20,7 +20,7 @@ signupForm.addEventListener('submit', (event) => {
             selectObject.remove(i);
         }
     }
-    // console.log(userData['password']);
+    //console.log(userData['password']);
     console.log(userData);
     console.log(JSON.stringify(userData));
 
