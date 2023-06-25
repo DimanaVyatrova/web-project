@@ -62,6 +62,9 @@ td {
     border-style: solid;
     border-color: rgb(174, 174, 174);
     border-width: 0.5px;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
 .form-body {
