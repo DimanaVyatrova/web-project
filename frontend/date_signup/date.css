@@ -55,7 +55,9 @@ img {
     width: 26px;
     background-color: rgb(215, 115, 34);
 }
-
+label{
+    font-size: 18px;
+}
 
 .info {
     display: flex;
@@ -90,6 +92,7 @@ img {
     padding-bottom: 20px;
     padding-left: 30px;
     padding-right: 30px;
+
 }
 
 .form-item {
@@ -99,13 +102,9 @@ img {
 .form-item input, label {
     display: block;
     width: 100%;
-
     box-sizing: border-box;
 }
 
-.form-item label{
-    font-size: 14px;
-}
 
 .form-item input, select{
     border-radius: 5px;
