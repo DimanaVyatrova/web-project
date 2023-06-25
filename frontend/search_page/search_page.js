@@ -5,6 +5,31 @@ console.log("asdsdf");
 searchForm.addEventListener('submit', (event) => {
     console.log("in listener");
 
+    const myNode = document.getElementById("table");
+    while (myNode.lastElementChild) {
+        myNode.removeChild(myNode.lastElementChild);
+    }
+
+    const tableRow = document.createElement('tr');
+
+    const tableColumnHour = document.createElement('th');
+    tableColumnHour.innerText = "Час";
+    tableRow.appendChild(tableColumnHour);
+
+    const tableColumnName = document.createElement('th');
+    tableColumnName.innerText = "Име";
+    tableRow.appendChild(tableColumnName);
+
+    const tableColumnFN = document.createElement('th');
+    tableColumnFN.innerText = "ФН";
+    tableRow.appendChild(tableColumnFN);
+
+    const tableColumnTopic = document.createElement('th');
+    tableColumnTopic.innerText = "Тема";
+    tableRow.appendChild(tableColumnTopic);
+
+    myNode.appendChild(tableRow);
+
     const userData = {};
     const selectors = searchForm.querySelectorAll('select');
     selectors.forEach(selector => {
@@ -33,7 +58,7 @@ searchForm.addEventListener('submit', (event) => {
         console.log(data);
 
         const table= document.getElementById('table');
-        
+
         data.forEach(row => {
             console.log(row);
             const tableRow = document.createElement('tr');

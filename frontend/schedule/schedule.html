@@ -18,10 +18,27 @@
 
     <header>
       <h1>График</h1>
-      <h2>Дата: 12.05.23</h2>
   </header>
 
     <main class="container">
+
+      <section class="form-body">
+        <form id="date-form">
+            <section class="form-item">
+                <label for="date">Дата</label>
+                <select id="date">
+                    <!-- <option value="none"></option> -->
+                    <option value="12.05.23">12.05.23</option>
+                    <option value="13.05.23">13.05.23</option>
+                </select>
+            </section>
+            
+            <section class="form-item">
+                <button class="btn">Покажи</button>
+            </section>
+        </form>
+      </section>
+
       <table id="table">
         <tr>
           <th>Час</th>

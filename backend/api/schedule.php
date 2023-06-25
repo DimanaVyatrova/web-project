@@ -6,13 +6,23 @@
         $db = new DB();
         $connection = $db->getConnection();
 
-        $sql = "SELECT * FROM presentations";
+        $userData = json_decode(file_get_contents("php://input"), true);
 
-        $result = $connection->query($sql);
+        $sql = "SELECT * FROM presentations WHERE date=:date";
 
-        $rows = $result->fetchAll(PDO::FETCH_ASSOC);
+        $stmt = $connection->prepare($sql);
+        //$stmt->execute(["date" => "12.05.23"]);
+        $stmt->execute($userData);
 
-        echo json_encode($rows);
+        $presentations = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        echo json_encode($presentations);
+
+        // $result = $connection->query($sql);
+
+        // $rows = $result->fetchAll(PDO::FETCH_ASSOC);
+
+        // echo json_encode($rows);
 
     } catch (PDOException $e) {
         http_response_code(500);

@@ -14,16 +14,6 @@ signupForm.addEventListener('submit', (event) => {
         userData[selector.id] = selector.value;
    });
 
-
-//    var subjectObject = {
-//     "12.05.23": [
-//       "12:00-12:07", "12:08-12:15", "12:16-12:23"   
-//     ],
-//     "13.05.23": [
-//         "12:00-12:07", "12:08-12:15", "12:16-12:23" 
-//     ]
-//   }
-
    var selectObject = document.getElementById("hour");
     for (var i=0; i<selectObject.length; i++) {
         if (selectObject.options[i].value == userData["hour"]) {
