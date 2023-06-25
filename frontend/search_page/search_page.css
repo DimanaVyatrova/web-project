@@ -48,7 +48,7 @@ button:hover {
     background-color: rgb(67, 106, 12);
     color: white;
     cursor: pointer;
-}
+} 
 
 .topnav a, p, img {
     float: left;
@@ -77,3 +77,22 @@ img {
     width: 26px;
     background-color: rgb(215, 115, 34);
 }  
+
+table{
+    width: 100%;
+    background-color: rgb(255, 251, 233);
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+th {
+    background-color: rgb(255, 196, 0);
+}
+
+td {
+    border-style: solid;
+    border-color: rgb(174, 174, 174);
+    border-width: 0.5px;
+}
+
+
