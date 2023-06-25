@@ -52,7 +52,6 @@ table{
     background-color: rgb(255, 251, 233);
     margin-bottom: 15px;
     margin-top: 30px;
-    font-size: 22px;
 }
 
 th {
@@ -72,30 +71,26 @@ td {
 .form-body {
     display: table;
     margin: auto;
-    font-size: 25px;
 }
 
 .form-item {
     display: table-cell;
     padding-right: 20px;
-    font-size: 25px;
 } 
 
 .form-item select{
-    border-radius: 8px;
+    border-radius: 5px;
     border: 1px rgb(153, 151, 151) solid;
     height: 30px;
 }
 
 button {
     height: 30px;
-    width: 100px;
-    border-radius: 8px;
+    border-radius: 5px;
     border: 1px rgb(153, 151, 151) solid;
     padding-left: 10px;
     padding-right: 10px;
     background-color: rgb(227, 243, 154);
-    font-size: 22px;
 }
 
 button:hover {
@@ -103,7 +98,3 @@ button:hover {
     color: white;
     cursor: pointer;
 } 
-section,select{
-    font-size: 22px;
-    padding: 2px;
-}
