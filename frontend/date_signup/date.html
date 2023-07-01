@@ -6,6 +6,7 @@
     <title>Date Sign Up</title>
     <link rel="stylesheet" href="./date.css">
     <script src="./date.js" defer></script>
+    
 </head>
 <body>
     <section class="topnav">
@@ -22,18 +23,31 @@
 
     <main class="form-container">
         <section class="form-body">
-            <form id="signup-form">
+            <form id="search-form">
                 <section class="form-item">
                     <label for="name">Име</label>
-                    <input id="name" name="name" required>
+                    <input id="name" name="name" >
                 </section>
                 <section class="form-item">
                     <label for="faculty_number">Факултетен номер</label>
-                    <input id="faculty_number" name="faculty_number" required>
+                    <input id="faculty_number" name="faculty_number">
                 </section>
                 <section class="form-item">
+                    <button class="btn" id="search-btn">Търсене</button>
+                </section>
+            </form>
+            <form id="submit-form">
+                <section class="form-item">
                     <label for="topic">Тема</label>
-                    <input id="topic" name="topic" required>
+                    <input id="topic" name="topic" disabled>
+                </section>
+                <section class="form-item">
+                    <label for="field">Област</label>
+                    <input id="field" name="field" disabled>
+                </section>
+                <section class="form-item">
+                    <label for="technology">Технология</label>
+                    <input id="technology" name="technology" disabled>
                 </section>
                 <section class="form-item">
                     <label for="date">Дата</label>
@@ -42,7 +56,7 @@
                         <option value="13.05.23">13.05.23</option>
                     </select>
                 </section>
-                <section class="form-item">
+                <section class="form-item" id="last">
                     <label for="hour">Час</label>
                     <select id="hour">
                         <option value="12:00-12:07">12:00-12:07</option>
@@ -50,32 +64,13 @@
                         <option value="12:16-12:23">12:16-12:23</option>
                     </select>
                 </section>
-                <section class="form-item">
-                    <label for="field">Област</label>
-                    <select id="field">
-                        <option value="Front-End">Front-End</option>
-                        <option value="Back-End">Back-End</option>
-                    </select>
-                </section>
-
-                <section class="form-item" id="last">
-                    <label for="technology">Технология</label>
-                    <select id="technology">
-                        <option value="CSS">CSS</option>
-                        <option value="HTML">HTML</option>
-                        <option value="PHP">PHP</option>
-                        <option value="JavaScript">JavaScript</option>
-                        <option value="TypeScript">TypeScript</option>
-                        <option value="HTTP">HTTP</option>
-                        <option value="Друго">Друго</option>
-                    </select>
-                </section>
                 
                 <section class="form-item">
-                    <button class="btn">Записване</button>
+                    <button class="btn" id="sign-btn">Записване</button>
                 </section>
             </form>
         </section>
     </main>
+   
 </body>
 </html>

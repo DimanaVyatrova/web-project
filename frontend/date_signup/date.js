@@ -1,15 +1,67 @@
-const signupForm = document.getElementById('signup-form');
+const searchForm = document.getElementById('search-form');
+const submitForm = document.getElementById('submit-form');
 
-signupForm.addEventListener('submit', (event) => {
-    console.log("ahahaha");
-    const inputs = signupForm.querySelectorAll('input');
+//Търсене
+searchForm.addEventListener('submit', (event) => {
+
+//console.log('hahah');// влиза във функцията
+
+const input_name = document.getElementById('name');
+const input_fn = document.getElementById('faculty_number');
+
+const userData = {};
+userData[input_name.name] = input_name.value;
+userData[input_fn.name] = input_fn.value;
+
+fetch('../../backend/api/search-user.php', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(userData)
+})
+.then((httpData) => {
+
+    return httpData.json();
+})
+.then((data) => {
+
+    data.forEach(row => {
+
+        const topic = document.getElementById('topic');
+        topic.value = row.topic;
+
+        const field = document.getElementById('field');
+        field.value = row.field; 
+
+        const technology = document.getElementById('technology');
+        technology.value = row.technology;
+
+    });
+
+});
+
+event.preventDefault();
+});
+
+//Submit
+
+
+submitForm.addEventListener('submit', (event) => {
+
+    const inputs = submitForm.querySelectorAll('input');
+    const inputsFirstForm = searchForm.querySelectorAll('input');
 
     const userData = {};
+    inputsFirstForm.forEach(input => {
+        userData[input.name] = input.value;
+    });
+
     inputs.forEach(input => {
          userData[input.name] = input.value;
     });
 
-    const selectors = signupForm.querySelectorAll('select');
+    const selectors = submitForm.querySelectorAll('select');
     selectors.forEach(selector => {
         userData[selector.id] = selector.value;
    });
@@ -20,9 +72,7 @@ signupForm.addEventListener('submit', (event) => {
             selectObject.remove(i);
         }
     }
-    //console.log(userData['password']);
-    console.log(userData);
-    console.log(JSON.stringify(userData));
+    
 
     fetch('../../backend/api/date_signup.php', {
         method: 'POST',
@@ -32,13 +82,10 @@ signupForm.addEventListener('submit', (event) => {
         body: JSON.stringify(userData)
     })
     .then((httpData) => {
-        console.log(httpData);
 
         return httpData.json();
     })
     .then((data) => {
-        console.log("here");
-        console.log(data);
 
         const pass_rep = document.getElementById('last');
         const p = document.createElement('p');
