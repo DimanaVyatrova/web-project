@@ -5,6 +5,11 @@ CREATE DATABASE IF NOT EXISTS `calendar` DEFAULT CHARACTER SET utf8 COLLATE utf8
 USE `calendar`;
 -- --------------------------------------------------------
 
+-- Create user and grant privileges
+CREATE USER 'webadmin'@'localhost' IDENTIFIED BY 'webadminpass';
+GRANT ALL PRIVILEGES ON Presentations.* TO 'webadmin'@'localhost';
+FLUSH PRIVILEGES;
+
 --
 -- Table structure for table `presentations`
 --
